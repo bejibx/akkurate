@@ -2,6 +2,7 @@ import dev.nesk.akkurate.gradle.libs
 
 plugins {
     id("akkurate.base.repositories")
+    id("akkurate.check.api-validation")
 }
 
 tasks.named<Wrapper>("wrapper") {
