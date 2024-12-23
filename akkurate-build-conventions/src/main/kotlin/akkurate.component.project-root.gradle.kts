@@ -2,6 +2,21 @@ import dev.nesk.akkurate.gradle.libs
 
 plugins {
     id("akkurate.base.repositories")
+    id("org.jetbrains.kotlinx.binary-compatibility-validator")
+}
+
+apiValidation {
+    ignoredProjects.addAll(
+        listOf(
+            "examples",
+            "ktor-server",
+        )
+    )
+
+    @OptIn(kotlinx.validation.ExperimentalBCVApi::class)
+    klib {
+        enabled = true
+    }
 }
 
 tasks.named<Wrapper>("wrapper") {

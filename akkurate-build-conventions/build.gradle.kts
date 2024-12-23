@@ -41,6 +41,7 @@ dependencies {
     implementation(libs.kotlin.plugin)
     implementation(libs.kotlin.symbolProcessing.plugin)
     implementation(libs.kotlinx.serialization.plugin)
+    implementation(libs.kotlinx.binaryValidator.plugin)
     implementation(libs.kotlinSnapshot.plugin)
     implementation(libs.dokka.plugin)
     implementation(libs.ktor.plugin)
